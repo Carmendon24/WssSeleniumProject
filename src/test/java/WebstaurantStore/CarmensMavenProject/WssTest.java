@@ -67,9 +67,9 @@ public class WssTest {
 
 	    
 		//Add Last Product of search results to Cart
-	    	searchResults.selectLastProduct();
+		searchResults.addLastProductToCart();
 	    
-	    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
 		//View Cart
 		header.viewCart();
