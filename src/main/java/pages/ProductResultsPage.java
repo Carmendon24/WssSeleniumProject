@@ -13,8 +13,8 @@ public class ProductResultsPage {
 	
 	//Last Product Search Result Locator
 	By addLastToCart = By.xpath("//div[@id='ProductBoxContainer'][last()]//input[@name='addToCartButton']");
+
 	
-    
 	//Select Last Product Search Result Method
 	public void addLastProductToCart() {
     		driver.findElement(addLastToCart).click();
