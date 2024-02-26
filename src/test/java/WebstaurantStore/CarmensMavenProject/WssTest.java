@@ -20,9 +20,9 @@ public class WssTest {
 
 		//Creating Chrome WebDriver instance
 /*		 
-		 //Uncomment this section for WebDriverManager use
-			//WebDriverManager.chromedriver().setup();
-			//WebDriver driver = new ChromeDriver();
+		//Uncomment this section for WebDriverManager use
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
 */
 		WebDriver driver = new ChromeDriver();
 
@@ -56,35 +56,35 @@ public class WssTest {
 	
 		List<WebElement> results = driver.findElements(By.id("ProductBoxContainer"));
 		
-	    try {
-	        for (int i = 0; i < results.size(); i++) {
-	 	       softAssert.assertTrue(results.get(i).getText().contains(searchTerm), searchTerm + " text does NOT exist in Title for Product.");
-	    		}
-	    	} catch (AssertionError e) {
-	        System.out.println("Assertion failed: " + e.getMessage());
-	        throw e;
-	    }
+	    	try {
+			for (int i = 0; i < results.size(); i++) {
+		 	       softAssert.assertTrue(results.get(i).getText().contains(searchTerm), searchTerm + " text does NOT exist in Title for Product.");
+		    		}
+			} catch (AssertionError e) {
+			System.out.println("Assertion failed: " + e.getMessage());
+			throw e;
+		}
 
 	    
 		//Add Last Product of search results to Cart
-	    searchResults.selectLastProduct();
+	    	searchResults.selectLastProduct();
 	    
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+	    	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
-	    //View Cart
-	    header.viewCart();
+		//View Cart
+		header.viewCart();
 	    
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 	    
-	    //Empty Cart and Confirm
-	    cart.emptyCart();
-	    cart.emptyCartConfirm();
+		//Empty Cart and Confirm
+		cart.emptyCart();
+		cart.emptyCartConfirm();
 	    
-	    //Close browser session
+		//Close browser session
 		driver.quit();
 		
-	    softAssert.assertAll();
+		softAssert.assertAll();
 		
-	}
+		}
 
 }
