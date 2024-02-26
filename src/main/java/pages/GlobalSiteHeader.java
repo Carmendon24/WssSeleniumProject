@@ -17,7 +17,7 @@ public class GlobalSiteHeader {
 	//View Cart Button Locator
 	By cartButton = By.linkText("View Cart");
 		
-
+	
 	//Enter Keyword Search Term Method
 	public void enterSearchTerm(String search) {
 		driver.findElement(searchField).sendKeys(search);
