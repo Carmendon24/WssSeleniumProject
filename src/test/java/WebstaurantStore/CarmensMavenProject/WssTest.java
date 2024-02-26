@@ -19,11 +19,11 @@ public class WssTest {
 	public static void main(String[] args) {
 
 		//Creating Chrome WebDriver instance
-/*		 
+	/*		 
 		//Uncomment this section for WebDriverManager use
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
-*/
+	*/
 		WebDriver driver = new ChromeDriver();
 
 
