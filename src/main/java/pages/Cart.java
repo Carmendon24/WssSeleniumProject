@@ -26,5 +26,5 @@ public class Cart {
 	public void emptyCartConfirm() {
 	driver.findElement(emptyCartConfirm).click();
 	}
-    
+
 }
