@@ -16,7 +16,7 @@ public class ProductResultsPage {
 	
     
 	//Select Last Product Search Result Method
-	public void selectLastProduct() {
+	public void addLastProductToCart() {
     		driver.findElement(addLastToCart).click();
 	}
  
